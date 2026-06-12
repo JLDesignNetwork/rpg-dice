@@ -1,3 +1,10 @@
+## 0.2.4 - JLDN Architectural Decoupling
+* Branched legacy Atom package to JLDesignNetwork.
+* Extracted statistical math logic and dice rolling into pure `engine.js`.
+* Formally decoupled mathematical algorithms from editor UI bindings.
+* Introduced Jest unit testing.
+* Upgraded engines target to `pulsar` natively.
+
 ## 0.1.0 - First Release
 * Added basic functionality for generating dice rolls using selected text for guidance and appending results to end of line.
 
