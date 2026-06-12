@@ -1,6 +1,6 @@
 {
   "name": "rpg-dice",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Generate inline dice rolls and ability score pools for an RPG like DnD directly inside Pulsar",
   "main": "./lib/rpg-dice",
   "engines": {
