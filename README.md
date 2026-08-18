@@ -1,66 +1,50 @@
-<div align="center">
-  <h1>🎲 RPG Dice</h1>
-  <p><strong>A Modern Dice Rolling & Stat Generation Engine for Pulsar</strong></p>
-  
-  [![Version](https://img.shields.io/badge/version-0.2.4-blue.svg)](#)
-  [![Engine](https://img.shields.io/badge/engine-Pulsar-purple.svg)](#)
-  [![License](https://img.shields.io/badge/license-MIT-green.svg)](#)
-</div>
+# RPG Dice
+
+[![GVS](https://img.shields.io/badge/GVS-2606.2.0--s-purple?style=flat-square)](https://github.com/JLDesignNetwork/Generational-Versioning-Schema)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE.md)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jldesignnetwork)
+
+Welcome to **RPG Dice** (JLDN Generational Versioning Schema: `2606.2.0-s`), a focused, lightweight inline dice rolling engine and ability score pool generator for the **Pulsar** text editor.
 
 ---
 
-> **Official JLDesignNetwork Fork**
-> This package has been mathematically decoupled, tested via Jest, and completely modernized from its original Atom framework. 
-> *Original concept and legacy codebase created by [akstuhl/rpg-dice](https://github.com/akstuhl/rpg-dice).*
+## Overview
+
+* **Author:** Jeff Langdon (JL Design Network)
+* **Version:** `2606.2.0-s` (Stable Release)
+* **Active Generation:** `2606`
+* **Target Editor:** [Pulsar](https://pulsar-edit.dev/) (`^1.0.0`)
 
 ---
 
-## 🌟 Overview
+## 📚 In-Repo Documentation Wiki
 
-`rpg-dice` transforms your Pulsar text editor into an absolute powerhouse for tabletop RPGs. Whether you're drafting campaign notes, building out a homebrew bestiary, or playing a text-based campaign, you can instantly execute complex dice rolls and mathematically accurate ability score generation directly inside your text buffer!
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/akstuhl/rpg-dice/main/asset/demo.gif" alt="Demo GIF">
-</div>
-
-## ⚡ How to Roll
-
-Simply type a standard RPG dice notation anywhere in your document, select the text, and hit <kbd>Ctrl+R</kbd> (or trigger the `rpg-dice:roll` command). The mathematical result is instantly calculated and elegantly appended to the end of your current line!
-
-### Standard Rolls
-*   `1d20` ➔ ` | 14`
-*   `2d6+3` ➔ ` | 11`
-*   `1d100` ➔ ` | 87`
-
-### Fate / Fudge Systems
-Need to roll Fate dice? Just use an `F` instead of a number!
-*   `4df` ➔ ` |  2`
-
-> **Note**: Critical Successes and Critical Failures are dynamically detected! Rolling a natural maximum adds a 🌟, and rolling a natural minimum adds a 💣!
-
-## 🛡️ Ability Score Generation
-
-Rolling a brand new character? `rpg-dice` has built-in, TTRPG-standard stat generation arrays!
-
-Type the word `STATS` on an empty line, highlight it, and hit <kbd>Ctrl+R</kbd>.
-*   **Method 3 (`STATS:3`)**: Rolls `3d6` per stat multiple times and picks the best array based on your config.
-*   **Method 4 (`STATS:4`)**: The classic **4d6 drop the lowest**. Rolls four six-sided dice, drops the lowest result, and tallies the remaining three.
-
-```text
-STATS:4
-Ability Score Pool:    11 (+0) | 14 (+2) | 16 (+3) |  9 (-1) | 13 (+1) | 18 (+4)
-```
-
-## ⚙️ Configuration
-
-`rpg-dice` allows you to fully customize default behaviors in the Pulsar settings:
-*   **Default Die Sides**: The default type of die if none is specified (e.g., `20` for d20s).
-*   **Default Number of Dice**: How many dice to roll if you leave the quantity blank.
-*   **Fate Dice**: Force all rolls to use Fate/Fudge logic (-1 to 1).
-*   **Verbose Output**: Appends the mathematical breakdown to the result: `23 (5d8+2)`.
-*   **Stat Generation Rules**: Configure whether `STATS` defaults to Method 3 or Method 4.
+- 📖 **[Knowledge Base Wiki Index](docs/index.md):** Complete package documentation.
+- 🏗️ **[Package Architecture](docs/architecture.md):** Subsystem architecture and math parser engine.
+- 🛠️ **[Usage & Command Guide](docs/usage.md):** Pulsar installation, keybindings, and command palette triggers.
+- 🎲 **[Dice Engine & Stat Pools](docs/dice_engine.md):** Dice syntax (`1d20+5`), Fate/Fudge rolls, and 3d6/4d6 stat pool generators.
+- 🗺️ **[Strategic Roadmap](.dev/ROADMAP.md):** Multi-generational roadmap.
+- 📝 **[Changelog](CHANGELOG.md):** Full chronological release history.
 
 ---
-<div align="center">
-  Maintained by <strong>JLDesignNetwork</strong> | MIT Licensed
-</div>
+
+## Core Capabilities
+
+1. 🎲 **Inline Dice Evaluation:** Type or highlight dice math (`1d20+5`, `2d8-2`, `8d8`) and calculate outcomes directly in the text editor buffer.
+2. 🪙 **Fate / Fudge Dice:** First-class support for Fate dice expressions (`4dF`).
+3. 📊 **Ability Score Pools:** Generate 3d6 and 4d6 drop-lowest attribute arrays with a single hotkey.
+4. 🔒 **Cryptographically Secure PRNG:** Powered by Node.js native `crypto.randomInt` (CWE-338 compliant).
+
+---
+
+## Funding & Support
+
+If you find this Pulsar package helpful, consider supporting ongoing development:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jldesignnetwork)
+
+---
+
+## License & Attribution
+
+Licensed under the [MIT License](LICENSE.md). Designed and maintained by Jeff Langdon / JL Design Network. All rights reserved.

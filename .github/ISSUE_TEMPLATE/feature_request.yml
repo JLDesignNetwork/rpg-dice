@@ -1,0 +1,23 @@
+name: "Dice Feature / Math Proposal"
+description: "Propose support for a new dice math notation or generation method."
+title: "[PROPOSAL]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a proposal for RPG Dice!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Feature Concept
+      description: What dice notation or mechanic should be supported?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Detailed Implementation Proposal
+      description: Describe the math formula and desired CLI/editor behavior.
+    validations:
+      required: true
